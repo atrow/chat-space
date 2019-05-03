@@ -39,7 +39,7 @@ Things you may want to cover:
 ### Association
 - has_many :messages
 - has_many :members
-- has_many :groupes, through: :members
+- has_many :groups, through: :members
 
 ## messagesテーブル
 
@@ -60,7 +60,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary: true|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :messages
