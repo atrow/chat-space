@@ -59,3 +59,6 @@ gem 'erb2haml'
 
 # icon
 gem 'font-awesome-sass', '~> 5.8.1'
+
+# devise
+gem 'devise'
