@@ -8,36 +8,37 @@
   padding-right: 40px;
   padding-left: 40px;
   border: 1px solid #eeeeee;
+
+  &__btn-edit {
+    height: 40px;
+    width: 70px;
+    float: right;
+    margin-top: 28px;
+    color: $back-color--info;
+    border: 1px solid $back-color--info;
+    position: relative;
+    :visited {
+      color: $back-color--info;
+    }
+  }
 }
 
 .group {
   float: left;
-}
 
-.group__name {
-  font-size: 20px;
-  color: #333333;
-  padding-top: 35px;
-  padding-bottom: 15px;
-}
+  &__name {
+    font-size: 20px;
+    color: #333333;
+    padding-top: 35px;
+    padding-bottom: 15px;
+  }
 
-.group__member {
-  font-size: 12px;
-  color: #999999;
-}
-
-.main-header__btn-edit {
-  height: 40px;
-  width: 70px;
-  float: right;
-  margin-top: 28px;
-  color: $back-color--info;
-  border: 1px solid $back-color--info;
-  position: relative;
-  :visited {
-    color: $back-color--info;
+  &__member {
+    font-size: 12px;
+    color: #999999;
   }
 }
+
 
 .link__edit {
   display: block;
@@ -58,31 +59,31 @@
   padding-right: 40px;
   padding-left: 40px;
   overflow: scroll;
-}
 
-.main-content__messages {
-  padding-bottom: 40px;
-}
+  &__messages {
+    padding-bottom: 40px;
+  }
 
-.main-content__user {
-  font-size: 16px;
-  font-weight: bold;
-  color: $color--massage;
-  float: left;
-  padding-right: 10px;
-  padding-bottom: 12px;
-}
+  &__user {
+    font-size: 16px;
+    font-weight: bold;
+    color: $color--massage;
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 12px;
+  }
 
-.main-content__datetime {
-  font-size: 12px;
-  color: #999999;
-  float: left;
-}
+  &__datetime {
+    font-size: 12px;
+    color: #999999;
+    float: left;
+  }
 
-.main-content__message {
-  font-size: 14px;
-  color: $color--massage;
-  clear: both;
+  &__message {
+    font-size: 14px;
+    color: $color--massage;
+    clear: both;
+  }
 }
 
 .main-input {
@@ -93,44 +94,44 @@
 
 .main-form {
   display: flex;
-}
 
-.main-form__box {
-  position: relative;
-  width: 100%;
-  margin-right: 10px;
-}
-
-.main-form__text {
-  height: 50px;
-  width: 100%;
-  padding-left: 10px;
-  font-size: 16px;
-  color: $color--massage;
-  border-style: none;
-}
-
-.main-form__image-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  :visited {
-    color: black;
+  &__box {
+    position: relative;
+    width: 100%;
+    margin-right: 10px;
   }
-  text-decoration: none;
-}
 
-.main-form__file {
-  display: none;
-}
+  &__text {
+    height: 50px;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 16px;
+    color: $color--massage;
+    border-style: none;
+  }
 
-.main-form__submit-button {
-  height: 50px;
-  padding-right: 30px;
-  padding-left: 30px;
-  margin-left: 15px;
-  background-color: $back-color--info;
-  color: white;
-  cursor: pointer;
+  &__image-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    :visited {
+      color: black;
+    }
+    text-decoration: none;
+  }
+
+  &__file {
+    display: none;
+  }
+  
+  &__submit-button {
+    height: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-left: 15px;
+    background-color: $back-color--info;
+    color: white;
+    cursor: pointer;
+  }
 }

@@ -12,25 +12,25 @@ li {
   background-color: #253141;
   padding-right: 20px;
   padding-left: 20px;
-}
 
-.side-header__username{
-  font-size: 16px;
-  font-weight: bold;
-  color: $color--white;
-  line-height: 100px;
-  float: left;
-}
-
-.side-header__icon {
-  color: $color--white;
-  line-height: 100px;
-  float: right;
-  display: flex;
-  :visited {
+  &__username{
+    font-size: 16px;
+    font-weight: bold;
     color: $color--white;
+    line-height: 100px;
+    float: left;
   }
-  text-decoration: none;
+
+  &__icon {
+    color: $color--white;
+    line-height: 100px;
+    float: right;
+    display: flex;
+    :visited {
+      color: $color--white;
+    }
+    text-decoration: none;
+  }
 }
 
 .side-content {
@@ -40,21 +40,21 @@ li {
   padding-right: 20px;
   padding-left: 20px;
   overflow: scroll;
-}
 
-.side-content__groups {
-  margin-bottom: 40px;
-}
+  &__groups {
+    margin-bottom: 40px;
+  }
 
-.side-content__group {
-  font-size: 15px;
-  font-weight: bold;
-  color: $color--white;
-  margin-bottom: 5px;
-}
+  &__group {
+    font-size: 15px;
+    font-weight: bold;
+    color: $color--white;
+    margin-bottom: 5px;
+  }
 
-.side-content__message {
-  font-size: 11px;
-  font-weight: bold;
-  color: $color--white;
+  &__message {
+    font-size: 11px;
+    font-weight: bold;
+    color: $color--white;
+  }
 }
