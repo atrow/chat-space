@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %title ChatSpace
+  %body
+    .header
+    .content
+      .side-menu
+        .side-header
+          %p.side-header__username testuser
+          %ul.side-header__icon
+            %li.side-header__create-group
+              = link_to 'https://tech-camp.in/expert' do
+                %i.fa.fa-edit
+            %li.side-header__edit-user
+              = link_to 'https://tech-camp.in/expert' do
+                %i.fa.fa-cog
+        .side-content
+          = render 'side-content'
+      .main-menu
+        .main-header
+          .group
+            %p.group__name testgroup
+            %p.group__member Member: testmember
+          .main-header__btn-edit
+            = link_to('Edit', 'https://tech-camp.in/expert', {class: 'link__edit'})
+        .main-content
+          = render 'main-content'
+        .main-input
+          %form.main-form
+            .main-form__box
+              %input.main-form__text{type: 'text', placeholder: 'type a message', name: 'text'}
+              %label.main-form__image-button
+                %i.fa.fa-image
+                  %input.main-form__file{type: 'file', name: 'file'}
+            %input.main-form__submit-button{type: 'submit', value: 'Send', name: 'submit'}
