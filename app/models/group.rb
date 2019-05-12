@@ -11,4 +11,12 @@ class Group < ApplicationRecord
       'まだメッセージはありません。'
     end
   end
+
+  def show_members
+    member = ""
+    users.each do |user|
+      member += user.name + " "
+    end
+    return member
+  end
 end

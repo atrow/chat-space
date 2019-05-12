@@ -21,8 +21,10 @@
       .main-menu
         .main-header
           .group
-            %p.group__name testgroup
-            %p.group__member Member: testmember
+            %p.group__name
+              = @group.name
+            %p.group__member
+              = "Member : #{@group.show_members}"
           .main-header__btn-edit
             = link_to 'Edit', edit_group_path(@group), class: 'link__edit'
         .main-content
