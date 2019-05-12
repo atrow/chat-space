@@ -17,16 +17,16 @@
               = link_to edit_user_registration_path(current_user) do
                 %i.fa.fa-cog
         .side-content
-          = render '/messages/side-content'
+          = render '/shared/side-content'
       .main-menu
         .main-header
           .group
             %p.group__name testgroup
             %p.group__member Member: testmember
           .main-header__btn-edit
-            = link_to('Edit', 'https://tech-camp.in/expert', {class: 'link__edit'})
+            = link_to 'Edit', edit_group_path(@group), class: 'link__edit'
         .main-content
-          = render '/messages/main-content'
+          = render partial: '/shared/main-content', collection: @messages, as: 'message'
         .main-input
           = form_for [@group, @message], html: {class: 'main-form'} do |f|
             .main-form__box
