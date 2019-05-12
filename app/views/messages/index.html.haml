@@ -28,10 +28,10 @@
         .main-content
           = render '/messages/main-content'
         .main-input
-          %form.main-form
+          = form_for [@group, @message], html: {class: 'main-form'} do |f|
             .main-form__box
-              %input.main-form__text{type: 'text', placeholder: 'type a message', name: 'text'}
-              %label.main-form__image-button
+              = f.text_field :body, class: 'main-form__text', placeholder: 'type a message'
+              = f.label :image, class: 'main-form__image-button' do
                 %i.fa.fa-image
-                  %input.main-form__file{type: 'file', name: 'file'}
-            %input.main-form__submit-button{type: 'submit', value: 'Send', name: 'submit'}
+                  = f.file_field :image, class: 'main-form__file'
+            = f.submit 'Send', class: 'main-form__submit-button'
