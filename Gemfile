@@ -62,3 +62,9 @@ gem 'font-awesome-sass', '~> 5.8.1'
 
 # devise
 gem 'devise'
+
+# CarrierWave
+gem 'carrierwave'
+
+# mini_magick
+gem 'mini_magick'
