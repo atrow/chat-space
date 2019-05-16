@@ -16,7 +16,7 @@ describe Message do
         message = build(:message, body: nil)
         expect(message).to be_valid
       end
-end
+    end
 
     context 'can not save' do
       it 'is invalid without content and image' do
