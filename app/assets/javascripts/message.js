@@ -1,22 +1,20 @@
 $(function() {
   function buildHTML(message) {
+    imageHtml = message.image !== undefined
+              ? `<img class="main-content__image" src="${message.image}">`
+              : ``;
     var html = `<div class="main-content__messages">
                   <p class="main-content__user">
                     ${message.user}
                   </p>
                   <p class="main-content__datetime">
-                  ${message.datetime}
+                    ${message.datetime}
                   </p>
                   <p class="main-content__message">
                     ${message.body}
                   </p>
-                  `
-    if(message.image !== undefined) {
-      html = html +`<img class="main-content__image" src="${message.image}">
-                  </div>`
-    } else {
-      html = html +`</div>`
-    }
+                  ${imageHtml}
+                </div>`
     return html;
   }
   $('#new_message').on('submit', function(e) {
