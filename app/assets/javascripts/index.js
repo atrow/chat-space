@@ -54,5 +54,10 @@ $(function() {
     var id = $(this).attr('data-user-id');
     var name = $(this).attr('data-user-name');
     appendChatUser(id, name);
+    $(this).parent().remove();
+  });
+
+  $(document).on('click', ".user-search-remove", function(){
+    $(this).parent().remove();
   });
 });
