@@ -53,8 +53,8 @@ $(function() {
   });
 
   $(document).on('click', ".user-search-add", function(){
-    var id = $(this).attr('data-user-id');
-    var name = $(this).attr('data-user-name');
+    var id = $(this).data('user-id');
+    var name = $(this).data('user-name');
     appendChatUser(id, name);
     $(this).parent().remove();
     $('#user-search-field.chat-group-form__input').val('');
