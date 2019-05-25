@@ -38,7 +38,9 @@ $(function() {
       $("#user-search-result").empty();
       if (users.length !== 0) {
         users.forEach(function(user){
-          appendUser(user);
+          if ($('#chat-group-users').find('input[value=' + user.id + ']').length === 0) {
+            appendUser(user);
+          }
         });
       }
       else {
@@ -55,6 +57,7 @@ $(function() {
     var name = $(this).attr('data-user-name');
     appendChatUser(id, name);
     $(this).parent().remove();
+    $('#user-search-field.chat-group-form__input').val('');
   });
 
   $(document).on('click', ".user-search-remove", function(){
