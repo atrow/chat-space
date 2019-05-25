@@ -11,9 +11,9 @@ $(function() {
   }
 
   function appendErrMsgToHTML(msg) {
-    var html =`<li>
+    var html =`<div class="chat-group-user clearfix">
                 <div class="chat-group-user__name">${msg}</div>
-              </li>`
+              </div>`
     search_result.append(html);
   }
 
