@@ -34,7 +34,7 @@ $(function() {
       $('.main-content').append(html)
       $('.main-form__text').val('')
       $('.main-content').animate({
-        scrollTop: $('.main-content')[0].scrollHeight}, 'fast');
+        scrollTop: $('.main-content')[0].scrollHeight}, 'swing');
     })
     .fail(function() {
       alert('投稿できませんでした')
@@ -62,8 +62,10 @@ $(function() {
         messages.forEach(function(message) {
           insertHTML.push(buildHTML(message));
         })
+        $('.main-content').append(insertHTML);
+        $('.main-content').animate({
+          scrollTop: $('.main-content__messages').height() * messages.length}, 'swing');
       }
-      $('.main-content').append(insertHTML);
     })
     .fail(function() {
       console.log('error');
