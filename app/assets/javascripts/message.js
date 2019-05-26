@@ -45,23 +45,25 @@ $(function() {
   })
 
   var reloadMessages = function() {
-    //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     var message_ids = [];
     $('.main-content__messages').each(function(i,value) {
       message_ids.push($(value).data('message-id'));
     });
     last_message_id = Math.max.apply(null,message_ids);
     $.ajax({
-      //ルーティングで設定した通りのURLを指定
       url: 'api/messages',
-      //ルーティングで設定した通りhttpメソッドをgetに指定
       type: 'get',
       dataType: 'json',
-      //dataオプションでリクエストに値を含める
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log('success');
+      var insertHTML = '';
+      if (messages.length !== 0) {
+        messages.forEach(function(message) {
+          insertHTML.push(buildHTML(message));
+        })
+      }
+      $('.main-content').append(insertHTML);
     })
     .fail(function() {
       console.log('error');
