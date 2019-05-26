@@ -45,13 +45,9 @@ $(function() {
   })
 
   var reloadMessages = function() {
-    var message_ids = [];
-    $('.main-content__messages').each(function(i,value) {
-      message_ids.push($(value).data('message-id'));
-    });
-    last_message_id = Math.max.apply(null,message_ids);
+    last_message_id = $('.main-content__messages:last').data('message-id');
     $.ajax({
-      url: 'api/messages',
+      url: './api/messages',
       type: 'get',
       dataType: 'json',
       data: {id: last_message_id}
@@ -59,16 +55,16 @@ $(function() {
     .done(function(messages) {
       var insertHTML = '';
       if (messages.length !== 0) {
-        messages.forEach(function(message) {
-          insertHTML.push(buildHTML(message));
-        })
+        messages.forEach(function(message){
+          insertHTML += (buildHTML(message));
+        });
         $('.main-content').append(insertHTML);
         $('.main-content').animate({
-          scrollTop: $('.main-content__messages').height() * messages.length}, 'swing');
-      }
+          scrollTop: $('.main-content')[0].scrollHeight}, 'swing');
+        }
     })
-    .fail(function() {
-      console.log('error');
+    .fail(function(messages) {
+      alert('メッセージ更新に失敗しました');
     });
   };
   setInterval(reloadMessages, 5000);
