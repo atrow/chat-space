@@ -3,7 +3,7 @@ $(function() {
     imageHtml = message.image !== undefined
               ? `<img class="main-content__image" src="${message.image}">`
               : ``;
-    var html = `<div class="main-content__messages">
+    var html = `<div class="main-content__messages" data-message-id="${message.id}">
                   <p class="main-content__user">
                     ${message.user}
                   </p>
