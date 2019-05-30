@@ -72,3 +72,7 @@ gem 'mini_magick'
 # jquery関連
 gem 'rails-ujs'
 # gem 'jquery-turbolinks'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
