@@ -67,5 +67,8 @@ $(function() {
       alert('メッセージ更新に失敗しました');
     });
   };
-  setInterval(reloadMessages, 5000);
+  if (location.href.match(/\/groups\/\d+\/messages/)) {
+    console.log("update pages")
+    setInterval(reloadMessages, 5000);
+  }
 })
