@@ -71,6 +71,9 @@ gem 'devise'
 # CarrierWave
 gem 'carrierwave'
 
+# fog-aws
+gem 'fog-aws'
+
 # mini_magick
 gem 'mini_magick'
 
