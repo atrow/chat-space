@@ -19,3 +19,5 @@
 # 画像保管フォルダ
 public/uploads/*
 public/images/*
+
+config/secrets.yml
