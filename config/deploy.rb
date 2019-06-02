@@ -22,6 +22,7 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 
+  set :linked_files, %w{ config/secrets.yml }
   desc 'upload secrets.yml'
   task :upload do
     on roles(:app) do |host|
@@ -41,5 +42,3 @@ set :default_env, {
   AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
   AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
 }
-
-set :linked_files, %w{ config/secrets.yml }
